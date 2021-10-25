@@ -1,0 +1,85 @@
+html,
+body {
+    height: 100%;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.gradient {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(234,236,238,1) 100%);
+}
+
+.page-header {
+    margin-top: 4rem;
+    font-size: 1.25rem;
+    
+}
+
+.features ul {
+    padding-left: 2rem;
+    list-style-type: none;
+}
+
+.features ul li {
+    padding-left: 2rem;
+    background-image: url(../img/check.svg);
+    background-repeat: no-repeat;
+    line-height: 1.5rem;
+}
+
+.about-header {
+    margin-top: 4rem;
+    font-size: 1rem;
+    
+}
+
+.contact-header {
+    margin-top: 4rem;
+    font-size: 1rem;
+    
+}
+
+.services-header {
+    margin-top: 4rem;
+    font-size: 1rem;
+    
+}
+
+.service-page-header {
+    margin-top: 4rem;
+    font-size: 1rem;
+    
+}
+
+.sales-header {
+    margin-top: 4rem;
+    font-size: 1rem;
+    
+}
+
+.map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+  }
+
+  .google-maps {
+    position: relative;
+    padding-bottom: 75%; 
+    height: 0;
+    overflow: hidden;
+}
+
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.h3 {
+    color: green;
+}
