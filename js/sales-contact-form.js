@@ -46,19 +46,34 @@
 		var name = $("#name").val();
         var email = $("#email").val();
         var phone = $("#phone").val();
-        var singlePager = $('input[type="checkbox"]:checked');
+        var message = $("#message").val();
+
+
+        /* var singlePager = $('input[type="checkbox"]:checked');
         var multiPage = $('input[type="checkbox"]:checked');
         var smartStarter = $('input[type="checkbox"]:checked');
         var smartProfessional = $('input[type="checkbox"]:checked');
         var smartBusiness = $('input[type="checkbox"]:checked');
-        var message = $("#message").val();
-        var checkbox = $('input[type="checkbox"]:checked');
+        var checkbox = $('input[type="checkbox"]:checked'); */
 
+        var selectedServices = $('.service:checked');
+
+        var servicesList = [];
+        selectedServices.each(function(index,service) {
+        servicesList.push($(service).attr('aria-name'));
+});
+ 
     
         $.ajax({
             type: "POST",
             url: "salescontactform-process.php",
-            data: "name=" + name + "&email=" + email + "&phone=" + phone + "&singlePager=" + singlePager + "&multiPage=" + multiPage + "&smartStarter=" + smartStarter + "&smartProfessional=" + smartProfessional + "&smartBusiness=" + smartBusiness + "&message=" + message + "&checkbox=" + checkbox, 
+            data: {
+                name: name,
+                email: email,
+                phone: phone,
+                services: servicesList,
+                message: message
+            }, 
             success: function(text) {
                 if (text == "success") {
                     formSuccess();
