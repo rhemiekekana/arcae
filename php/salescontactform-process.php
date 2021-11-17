@@ -1,6 +1,8 @@
 <?php
 $errorMSG = "";
 
+
+
 if (empty($_REQUEST['name'])) {
     $errorMSG = "Name is required ";
 } else {
@@ -46,24 +48,14 @@ $Body .= "\n";
 $Body .= "Phone: ";
 $Body .= $phone;
 $Body .= "\n";
-$Body .= "Single Pager: ";
-$Body .= $singlepage;
+$Body .= "Services: ";
 $Body .= "\n";
-$Body .= "Multipage: ";
-$Body .= $multipage;
-$Body .= "\n";
-$Body .= "Smart Starter: ";
-$Body .= $smartstart;
-$Body .= "\n";
-$Body .= "Smart Professional: ";
-$Body .= $smartpro;
-$Body .= "\n";
-$Body .= "Smart Business: ";
-$Body .= $smartbus;
+$Body .= implode("\n", $_REQUEST['services']);
 $Body .= "\n";
 $Body .= "Message: ";
 $Body .= $message;
 $Body .= "\n";
+
 
 
 // send email
