@@ -49,23 +49,21 @@ body {
 .service-page-header {
     margin-top: 4rem;
     font-size: 1rem;
-    
 }
 
 .sales-header {
     margin-top: 5rem;
     font-size: 1rem;
-    
 }
 
 .map {
     height: 400px;
-    /* The height is 400 pixels */
+    /* The height is 400px */
     width: 100%;
     /* The width is the width of the web page */
-  }
+}
 
-  .google-maps {
+.google-maps {
     position: relative;
     padding-bottom: 75%; 
     height: 0;
